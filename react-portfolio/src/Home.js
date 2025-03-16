@@ -1,11 +1,18 @@
 import React from "react";
+import './Home.css';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>ยินดีต้อนรับสู่เว็บไซต์ของฉัน</p>
-    </div>
+    
+      <div className="home-content">
+        <h1 className="title">Welcome to My Portfolio</h1>
+        <p className="description">
+          I am a passionate developer with a focus on building clean and
+          modern web applications.
+        </p>
+        <a href="#projects" className="btn">Explore Projects</a>
+      </div>
+    
   );
 };
 
