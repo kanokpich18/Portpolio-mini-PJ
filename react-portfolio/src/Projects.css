@@ -1,15 +1,15 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ffbdac, #d79562);
+  justify-content: center;
+  background: url("./images/p.gif") no-repeat center center;
+  background-size: cover; /* ปรับให้เต็มหน้าจอ */
   min-height: 100vh;
-  width: 100%;
-  padding: 10px 10px 10px;
-  box-sizing: border-box; 
+  padding: 100px;
+  margin-top: -150px;
+  
 }
-
 
 .section-title {
   font-size: 2.5rem;
@@ -36,6 +36,11 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  animation: shake 1s ease-in-out infinite;
+}
+.project-card:hover {
+  animation: none; /* หยุดการเคลื่อนไหวเมื่อ hover */
+  transform: translateY(-8px); /* เพิ่มการเคลื่อนไหวของการ์ดเมื่อ hover */
 }
 
 
@@ -56,13 +61,14 @@
   font-size: 1rem;
   margin-bottom: 20px;
 }
-
 .project-card img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;     /* กว้างสุดตามขนาดของการ์ด */
+  max-height: 200px;   /* ความสูงสูงสุดของภาพ */
+  object-fit: contain; /* คงสัดส่วนของภาพ */
   border-radius: 10px;
-  object-fit: cover; 
 }
+
+
 
 .btn {
   background-color: #ff6200;
@@ -85,18 +91,18 @@
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;  
-  align-items: center;     
-  height: 80px;            
-  width: 100%;             
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  z-index: 10; /* เพิ่ม z-index ให้นาฟบาร์อยู่ด้านบน */
 }
-
 .navbar-button {
   padding: 12px 20px;
   margin: 0 15px;
-  background-color: transparent;
-  color: #333;
-  border: 2px solid transparent;
+  background-color: #e55b00; /* ทำให้พื้นหลังโปร่งใส */
+  color:antiquewhite; /* ตัวอักษรเป็นสีส้ม */
+  border: 2px solid #000000; /* ขอบเป็นสีส้ม */
   border-radius: 5px;
   font-size: 16px;
   font-weight: 600;
@@ -105,26 +111,80 @@
 }
 
 .navbar-button:hover {
-  background-color: #ff6200;
-  color: white;
-  border-color: #ff6200;
+  background-color: transparent; /* พื้นหลังเป็นสีส้มเมื่อ hover */
+  color: white; /* เปลี่ยนข้อความเป็นสีขาว */
+  border-color: #ff6200; /* ขอบยังคงสีส้ม */
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-button:active {
-  transform: scale(0.98);
+  background-color: transparent;; /* สีส้มเข้มเมื่อกด */
+  color: white; /* ข้อความเป็นสีขาว */
+  border-color: #e55b00; /* ขอบเป็นสีส้มเข้ม */
 }
 
-
 .navbar-button.selected {
-  background-color: #ff6200;
-  color: white;
-  border-color: #ff6200;
+  background-color: #ff6200; /* สีส้มเมื่อเลือก */
+  color: white; /* ข้อความเป็นสีขาวเมื่อเลือก */
+  border-color: #ff6200; /* ขอบเป็นสีส้ม */
 }
 
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ปรับการ์ดให้เล็กลง */
+  }
+}
+.image-container {
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.arrow-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

@@ -22,13 +22,12 @@ code {
   width: 100%;             
 }
 
-
 .navbar-button {
   padding: 12px 20px;
   margin: 0 15px;
-  background-color: transparent;
-  color: #333;
-  border: 2px solid transparent;
+  background-color: #e55b00; /* ทำให้พื้นหลังโปร่งใส */
+  color:antiquewhite; /* ตัวอักษรเป็นสีส้ม */
+  border: 2px solid #000000; /* ขอบเป็นสีส้ม */
   border-radius: 5px;
   font-size: 16px;
   font-weight: 600;
@@ -37,24 +36,24 @@ code {
 }
 
 .navbar-button:hover {
-  background-color: #ff6200;
-  color: white;
-  border-color: #ff6200;
+  background-color: transparent; /* พื้นหลังเป็นสีส้มเมื่อ hover */
+  color: white; /* เปลี่ยนข้อความเป็นสีขาว */
+  border-color: #ff6200; /* ขอบยังคงสีส้ม */
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-button:active {
-  transform: scale(0.98);
+  background-color: transparent;; /* สีส้มเข้มเมื่อกด */
+  color: white; /* ข้อความเป็นสีขาว */
+  border-color: #e55b00; /* ขอบเป็นสีส้มเข้ม */
 }
-
 
 .navbar-button.selected {
-  background-color: #ff6200;
-  color: white;
-  border-color: #ff6200;
+  background-color: #ff6200; /* สีส้มเมื่อเลือก */
+  color: white; /* ข้อความเป็นสีขาวเมื่อเลือก */
+  border-color: #ff6200; /* ขอบเป็นสีส้ม */
 }
-
 
 .content {
   margin-top: 100px;  

@@ -6,12 +6,10 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="about-card">
-        {/* รูปภาพ */}
         <div className="about-image">
           <img src={myImage} alt="Profile" className="profile-img" />
         </div>
 
-        {/* ข้อมูลส่วนตัว */}
         <div className="about-text">
           <h1 className="name">KANOKPICH KOSAMET</h1>
           <h2 className="title">Electronic Engineering Student</h2>
@@ -23,7 +21,6 @@ const About = () => {
             🏫 <strong>Chanthaburi Technical College</strong> (Computer Technology) <br/>(2017 - 2023)
           </p>
 
-          {/* ส่วนแสดง Skill */}
           <h2 className="title">Skill</h2>
           <div className="skill-container">
             <div className="skill-card skill-javascript">JavaScript</div>
