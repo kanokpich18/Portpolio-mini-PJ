@@ -1,54 +1,130 @@
 .projects-container {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ffbdac, #d79562);
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px 10px 10px;
+  box-sizing: border-box; 
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.project-card {
+  background:antiquewhite;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; 
+}
+
+.btn {
+  background-color: #ff6200;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #e55b00;
+  transform: scale(1.05);
+}
+.navbar {
+  background: linear-gradient(to right, #ffbdac, #d79562);
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  height: 80px;            
+  width: 100%;             
+}
+
+.navbar-button {
+  padding: 12px 20px;
+  margin: 0 15px;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #ff6200;
+  color: white;
+  border-color: #ff6200;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-button:active {
+  transform: scale(0.98);
+}
+
+
+.navbar-button.selected {
+  background-color: #ff6200;
+  color: white;
+  border-color: #ff6200;
+}
+
+@media (max-width: 768px) {
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ปรับการ์ดให้เล็กลง */
   }
-  
-  .project-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .project-card h3 {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .project-card p {
-    color: #555;
-  }
-  
-  .btn {
-    background-color: #ff6200;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  .btn:hover {
-    background-color: #e55b00;
-  }
-  
+}

@@ -1,14 +1,19 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* กล่อง About Me */
 .home-container {
-    background-image: url('https://via.placeholder.com/1600x900');
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-  }
+  display: flex;
+  background: linear-gradient(to right, #ffc0b1, #ffd5b5);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: -150px;
+}
   
   .home-content {
     background: rgba(0, 0, 0, 0.5);
