@@ -20,16 +20,27 @@ const About = () => {
           <p className="education">
             🏫 <strong>Chanthaburi Technical College</strong> (Computer Technology) <br/>(2017 - 2023)
           </p>
+        </div>
+      </div>
 
-          <h2 className="title">Skill</h2>
-          <div className="skill-container">
-            <div className="skill-card skill-javascript">JavaScript</div>
-            <div className="skill-card skill-react">React.js</div>
-            <div className="skill-card skill-python">Python Basic</div>
-            <div className="skill-card skill-html">HTML</div>
-            <div className="skill-card skill-css">CSS</div>
-            <div className="skill-card skill-mysql">MySQL</div>
-          </div>
+      <div className="skill-card-container">
+        <h2 className="title">Skill</h2>
+        <div className="skill-container">
+          <div className="skill-card skill-javascript">JavaScript</div>
+          <div className="skill-card skill-react">React.js</div>
+          <div className="skill-card skill-python">Python Basic</div>
+          <div className="skill-card skill-html">HTML</div>
+          <div className="skill-card skill-css">CSS</div>
+          <div className="skill-card skill-mysql">MySQL</div>
+        </div>
+      </div>
+
+      <div className="objective-card-container">
+        <h2 className="title">Objective</h2>
+        <div className="objective-card">
+          <p>
+          Study and seek opportunities to develop skills in both Frontend and Backend web development to use basic knowledge in web development. Want to learn new things and gain experience working as a team to produce qualitywork.
+          </p>
         </div>
       </div>
     </div>

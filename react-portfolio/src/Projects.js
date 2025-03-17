@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './Projects.css';
 import projectImage1 from './images/1.png';
 import projectImage2 from './images/2.png';
@@ -7,36 +7,31 @@ import projectImage4 from './images/4.png';
 import projectImage5 from './images/5.png';
 import projectImage6 from './images/6.png';
 import projectImage7 from './images/7.png';
+import projectImage8 from './images/8.png';
+import projectImage9 from './images/9.png';
+import projectImage10 from './images/10.png';
+import projectImage11 from './images/11.png';
 
 const Projects = () => {
-  // สร้าง state สำหรับการติดตามตำแหน่งของภาพสำหรับแต่ละโปรเจกต์
-  const [currentImageIndexes, setCurrentImageIndexes] = useState(
-    new Array(2).fill(0) // ปรับให้เป็นจำนวนโปรเจกต์ที่มีใน array (2 ในที่นี้)
-  );
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = [
     { 
       title: "Project Mobile Application for food Calorie Detection and Analysis through Image Recognition and Barcode Scanning", 
-      description: " A mobile application for food calorie detection and analysis using image recognition and barcode scanning. Users can take photos or scan barcodes to instantly receive detailed calorie and nutritional information. Ideal for individuals aiming to manage their diet and improve their health efficiently ",  
-      images: [projectImage3, projectImage4, projectImage1,projectImage5,projectImage6,projectImage7] 
-    },
-    { 
-      title: "Project Mobile Application for food Calorie Detection and Analysis through Image Recognition and Barcode Scanning", 
-      description: "Used Flutter to develop a mobile application. Built a website using Python, HTML, and JavaScript. Utilized Firebase as the backend for data storage and management ",  
-      images: [projectImage2] 
+      description: "A mobile application for food calorie detection and analysis using image recognition and barcode scanning. Users can take photos or scan barcodes to instantly receive detailed calorie and nutritional information. Ideal for individuals aiming to manage their diet and improve their health efficiently",  
+      images: [projectImage3, projectImage4, projectImage1, projectImage5, projectImage6, projectImage7,projectImage2,projectImage8,projectImage9,projectImage10,projectImage11]
     },
   ];
 
-  // เลื่อนภาพโดยอัตโนมัติ
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndexes((prevIndexes) => 
-        prevIndexes.map((index, i) => (index + 1) % projects[i].images.length)
-      );
-    }, 3000); // 3000ms = 3 วินาที
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % projects[0].images.length);
+  };
 
-    return () => clearInterval(interval); // ลบ interval เมื่อคอมโพเนนต์ unmount
-  }, []);
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? projects[0].images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="projects-container" id="projects">
@@ -44,11 +39,16 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <div className="image-container">
-              <img
-                src={project.images[currentImageIndexes[index]]}
-                alt={project.title}
-                className="project-image"
-              />
+              {/* ตรวจสอบว่ามีข้อมูลใน images หรือไม่ */}
+              {project.images && project.images.length > 0 ? (
+                <img src={project.images[currentImageIndex]} alt={project.title} className="project-image" />
+              ) : (
+                <p>No images available</p> // ถ้าไม่มีรูปภาพจะแสดงข้อความนี้
+              )}
+              <div className="image-arrows">
+                <button onClick={handlePrevImage} className="arrow-btn">←</button>
+                <button onClick={handleNextImage} className="arrow-btn">→</button>
+              </div>
             </div>
             <h3>{project.title}</h3>
             <p>{project.description}</p>

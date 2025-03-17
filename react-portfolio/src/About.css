@@ -70,35 +70,65 @@ body {
   margin-bottom: 10px;
 }
 
-.social-links {
+.skill-card-container,
+.objective-card-container {
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.skill-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  margin-top: 15px;
 }
 
-.btn {
-  text-decoration: none;
+.skill-card {
   padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
-  transition: background 0.3s;
-  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn:hover {
-  background: #0056b3;
+.skill-javascript { background-color: #f7df1e; color: #000; }
+.skill-react { background-color: #61dafb; color: #000; }
+.skill-python { background-color: #3776ab; }
+.skill-html { background-color: #e34f26; }
+.skill-css { background-color: #2965f1; }
+.skill-mysql { background-color: #00758f; }
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.objective-card {
+  background-color:antiquewhite;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.objective-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.objective-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
 }
 
 @media (max-width: 768px) {
@@ -121,32 +151,6 @@ body {
   gap: 15px;
   margin-top: 20px;
 }
-
-
-.skill-card {
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: white; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-javascript { background-color: #f7df1e; color: #000; }
-.skill-react { background-color: #61dafb; color: #000; }
-.skill-python { background-color: #3776ab; }
-.skill-html { background-color: #e34f26; }
-.skill-css { background-color: #2965f1; }
-.skill-mysql { background-color: #00758f; }
-
-
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -159,6 +163,7 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
   }
+  
   .navbar {
     background: linear-gradient(to right, #ffbdac, #d79562);
     padding: 16px;
