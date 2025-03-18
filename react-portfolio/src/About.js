@@ -24,7 +24,7 @@ const About = () => {
       </div>
 
       <div className="skill-card-container">
-        <h2 className="title">Skill</h2>
+        <h2 className="title" style={{textAlign:'center'}}>Skill</h2>
         <div className="skill-container">
           <div className="skill-card skill-javascript">JavaScript</div>
           <div className="skill-card skill-react">React.js</div>

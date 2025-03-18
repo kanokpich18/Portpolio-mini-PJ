@@ -39,11 +39,10 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <div className="image-container">
-              {/* ตรวจสอบว่ามีข้อมูลใน images หรือไม่ */}
               {project.images && project.images.length > 0 ? (
                 <img src={project.images[currentImageIndex]} alt={project.title} className="project-image" />
               ) : (
-                <p>No images available</p> // ถ้าไม่มีรูปภาพจะแสดงข้อความนี้
+                <p>No images available</p>
               )}
               <div className="image-arrows">
                 <button onClick={handlePrevImage} className="arrow-btn">←</button>
