@@ -11,7 +11,7 @@ const About = () => {
         </div>
 
         <div className="about-text">
-          <h1 className="name">KANOKPICH KOSAMET</h1>
+          <h1 className="name" style={{fontSize:35}}>KANOKPICH KOSAMET</h1>
           <h2 className="title">Electronic Engineering Student</h2>
           <p className="education">
             🎓 <strong>Bachelor of Electronic Engineering Technology</strong>  

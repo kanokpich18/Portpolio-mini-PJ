@@ -18,13 +18,14 @@ body {
   background: url("./images/p.gif") no-repeat center center;
   background-size: cover; 
   gap: 20px;
-  margin-top: -150px;
+  margin-top: -300px;
 }
 
 
 .about-card {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  margin-top: 220px; 
   align-items: center;
   background:antiquewhite;
   padding: 40px;
@@ -40,8 +41,8 @@ body {
 
 
 .about-image .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px ;
@@ -64,11 +65,31 @@ body {
 }
 
 .title {
-  font-size: 18px;
+  font-size: 28px; 
+  font-weight: bold;
   color: #007bff;
-  font-weight: 600;
-  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #c6bcff, #5573aa); 
+  -webkit-text-stroke: 0px black; 
+  -webkit-text-fill-color:rgb(72, 65, 95);
+  transition: all 0.3s ease-in-out;
 }
+
+
+
+.title:hover::after {
+  opacity: 1;
+  width: 120px; 
+}
+
+.title:hover {
+  transform: scale(1.05); 
+}
+
 
 .education, .bio {
   font-size: 16px;
