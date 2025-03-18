@@ -7,7 +7,7 @@
   background-size: cover; /* ปรับให้เต็มหน้าจอ */
   min-height: 100vh;
   padding: 100px;
-  margin-top: -150px;
+  margin-top: -220px;
   
 }
 
@@ -158,19 +158,35 @@
 }
 
 .arrow-btn {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #ff6200, #e55b00); 
   color: white;
-  border: none;
-  padding: 10px;
-  font-size: 20px;
+  border: 2px solid #000000;
+  padding: 12px 24px; 
+  font-size: 20px; 
   cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s;
+  border-radius: 50px; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
 .arrow-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(45deg, #ff8f00, #ff6200); 
+  color: white; 
+  transform: scale(1.1); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
 }
+
+.arrow-btn:active {
+  background: linear-gradient(45deg, #e55b00, #ff6200); 
+  transform: scale(0.95); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.arrow-btn:focus {
+  outline: none; 
+  box-shadow: 0 0 10px 3px rgba(255, 98, 0, 0.7); 
+}
+
 @keyframes shake {
   0% {
     transform: translateX(0);
