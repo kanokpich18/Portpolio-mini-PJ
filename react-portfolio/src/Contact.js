@@ -17,9 +17,10 @@ const Contact = () => {
         <a href="https://www.facebook.com/profile.php?id=100011545186437" target="_blank" rel="noopener noreferrer">
           <FaFacebook className="social-icon" />
         </a>
-        <a href="01kanokpich12com61@gmail.com">
+        <a href="https://mail.google.com/mail/u/0/#inbox">
           <FaEnvelope className="social-icon" />
         </a>
+        
       </div>
     </div>
   );

@@ -73,10 +73,10 @@ body {
   padding-bottom: 10px;
   position: relative;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(90deg, #c6bcff, #5573aa); 
-  -webkit-text-stroke: 0px black; 
-  -webkit-text-fill-color:rgb(72, 65, 95);
   transition: all 0.3s ease-in-out;
+  background: linear-gradient(45deg, #693893 , #a869d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -193,6 +193,14 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
   }
+  .about-card, .objective-card {
+    background: rgba(250, 235, 215, 0.8); /* สี antiquewhite โปร่งใส 80% */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
   
   .navbar {
     background: url("./images/p.gif") no-repeat center center; 
